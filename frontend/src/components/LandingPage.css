@@ -1,0 +1,317 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: #e0f7fa;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #e0f7fa;
+}
+
+/* App Bar */
+.app-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: linear-gradient(145deg, #ffffff, #e0e0e0);
+  z-index: 100;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-bar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Container */
+.logo {
+  margin-left: 20px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.logo-image {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo-text:hover {
+  color: #555;
+  transform: scale(1.1);
+}
+
+/* Auth Buttons Container */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Button Styles */
+.btn-login,
+.btn-logout,
+.btn-register {
+  color: white;
+  background-color: #ff7043;
+}
+
+.btn-login:hover,
+.btn-logout:hover,
+.btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-logout {
+  width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-bar {
+    padding: 0 20px;
+  }
+
+  .auth-buttons {
+    gap: 10px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+/* Carousel Section */
+.carousel-section {
+  height: 90vh;
+  overflow: hidden;
+  background-color: #e0f7fa;
+}
+
+.carousel-overlay {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 38%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  object-fit: cover;
+  width: 100%;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.carousel-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+  z-index: 1;
+}
+
+.carousel-caption h2 {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.carousel-caption p {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Popular Books Section */
+.popular-books-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0f4f8;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Books Grid */
+.books-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #f9f9f9, #eaeaea);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.books-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  background: linear-gradient(145deg, #ffffff, #f7f7f7);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff7043;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.book-title:hover {
+  color: #ff7043;
+}
+
+.custom-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.custom-input-group input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.custom-input-group button {
+  flex-shrink: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
+
+.book-card-link {
+  text-decoration: none;
+}

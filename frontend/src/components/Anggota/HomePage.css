@@ -1,0 +1,523 @@
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add space between links */
+  margin-right: 20px; /* Space to the right for the logout button */
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Set default color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link-active {
+  color: #ff7043;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #ff7043; /* Highlight color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Logout Button */
+.btn-logout {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff7043;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-logout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* New Arrivals Section */
+.new-arrival-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: white;
+  gap: 40px;
+}
+
+.new-arrival-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.new-arrival-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-left: 50px;
+  line-height: 1.5;
+}
+
+.section-title-newBooks {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  color: #333;
+}
+
+.section-subtitle-newBooks {
+  font-size: 28px;
+  color: #555;
+  margin-left: 50px;
+  line-height: 1.5;
+}
+
+/* Carousel */
+.new-arrival-carousel {
+  flex: 1.5;
+  max-width: 600px;
+}
+
+.book-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-carousel-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-carousel-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.carousel-book-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6); /* Add background for better visibility */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: white; /* Light blue background */
+  padding: 20px 20px; /* Reduced padding for a smaller footer */
+  color: #003366; /* Dark blue text color */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Responsive layout */
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top for a cleaner look */
+  max-width: 1000px; /* Reduced container width for a more compact footer */
+  margin: 0 auto; /* Center the container */
+  gap: 20px;
+}
+
+.footer-logo {
+  flex: 1 1 15%; /* Smaller width for the logo section */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the logo */
+}
+
+.footer-logo-image {
+  width: 40px; /* Smaller logo */
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.footer-logo-text {
+  font-size: 20px; /* Reduced text size for the logo */
+  font-weight: bold;
+  color: #003366;
+  text-align: center;
+}
+
+.footer-about,
+.footer-contact,
+.footer-address {
+  flex: 1 1 20%; /* Adjusted width for each section */
+  font-size: 14px; /* Reduced font size for compactness */
+}
+
+.footer-about h3,
+.footer-contact h3,
+.footer-address h3 {
+  font-size: 16px; /* Slightly smaller heading */
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-address p {
+  font-size: 13px; /* Reduced paragraph font size */
+  line-height: 1.4; /* Adjusted line height for compactness */
+  color: #333;
+}
+
+.footer-contact span {
+  font-weight: bold;
+  color: #003366;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-logo,
+  .footer-about,
+  .footer-contact,
+  .footer-address {
+    flex: 1 1 100%;
+    margin-bottom: 15px; /* Reduced spacing between sections */
+  }
+}
+
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: #f0f4f8;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f0f4f8;
+}
+
+/* App Bar */
+/* App Bar Styles */
+.app-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: linear-gradient(145deg, #ffffff, #e0e0e0);
+  z-index: 100;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-bar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Container */
+.logo {
+  margin-left: 20px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+/* Logo Image */
+.logo-image {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+}
+
+/* Logo Text */
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo-text:hover {
+  color: #555;
+  transform: scale(1.1);
+}
+
+/* Auth Buttons Container */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+/* Button Base Styles */
+.btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-bar {
+      padding: 0 20px;
+  }
+
+  .auth-buttons {
+      gap: 10px;
+  }
+
+  .logo-text {
+      font-size: 18px;
+  }
+
+  .btn {
+      font-size: 14px;
+      padding: 8px 20px;
+  }
+}
+
+/* Carousel Section */
+.carousel-section {
+  height: 90vh;
+  overflow: hidden;
+  background-color: #e0f7fa;
+}
+
+.carousel-overlay {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 38%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  object-fit: cover;
+  width: 100%;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.carousel-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+  z-index: 1;
+}
+
+.carousel-caption h2 {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.carousel-caption p {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Popular Books Section */
+.popular-books-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0f4f8;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Wrapper for books */
+.books-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #f9f9f9, #eaeaea);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.books-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust the books grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Book card */
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  background: linear-gradient(145deg, #ffffff, #f7f7f7);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff7043;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Book cover image */
+.book-cover {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Book title */
+.book-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.book-title:hover {
+  color: #ff7043;
+}
+
+.custom-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adds space between input and button */
+}
+
+.custom-input-group input {
+  flex: 1; /* Ensures the input field takes up all available space */
+  min-width: 250px; /* Ensures a minimum width for smaller screens */
+}
+
+.custom-input-group button {
+  flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+.carousel-control-prev, .carousel-control-next {
+  display: none;
+}
+
+.book-card-link {
+  text-decoration: none;
+}

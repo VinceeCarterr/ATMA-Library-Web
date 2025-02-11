@@ -1,0 +1,157 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* App Bar */
+  /* App Bar */
+/* App Bar Styles */
+.app-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    z-index: 100;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .app-bar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive Design for App Bar */
+  @media (max-width: 768px) {
+    .app-bar {
+      padding: 0 20px;
+    }
+  }  
+  
+  /* Logo */
+/* Logo Container */
+.logo {
+    margin-left: 20px;
+  }
+  
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+  }
+  
+  /* Logo Image */
+  .logo-image {
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Logo Text */
+  .logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .logo-text:hover {
+    color: #555;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design for Logo Text */
+  @media (max-width: 768px) {
+    .logo-text {
+      font-size: 18px;
+    }
+  }
+  
+  
+  /* Navigation Links */
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Add space between links */
+    margin-right: 20px; /* Space to the right for the logout button */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Set default color */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ff7043; /* Highlight color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  /* Responsive Design for Navigation Links */
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 10px;
+    }
+  }
+  
+  
+  /* Responsive Design for Navbar */
+  @media (max-width: 768px) {
+    .app-bar {
+      padding: 0 20px;
+    }
+  
+    .nav-links {
+      gap: 15px;
+    }
+  
+    .logo-text {
+      font-size: 18px;
+    }
+  
+    .nav-link {
+      font-size: 14px;
+    }
+  }
+  
+  
+  /* Form Section */
+  .form-section {
+    padding-top: 100px;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+  }
+  
+  .form-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-container img {
+    border-radius: 10px;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  .form-control {
+    margin-bottom: 12px;
+  }
+  

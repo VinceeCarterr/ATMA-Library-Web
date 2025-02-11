@@ -1,0 +1,248 @@
+body {
+  background-color: #f0f4f8;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add space between links */
+  margin-right: 20px; /* Space to the right for the logout button */
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Set default color */
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff7043; /* Highlight color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-link-active {
+  color: #ff7043;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Logout Button */
+.btn-logout {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff7043;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-logout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* New Arrivals Section */
+.new-arrival-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: white;
+  gap: 40px;
+}
+
+.new-arrival-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.new-arrival-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-left: 50px;
+  line-height: 1.5;
+}
+
+.section-title-newBooks {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  color: #333;
+}
+
+.section-subtitle-newBooks {
+  font-size: 28px;
+  color: #555;
+  margin-left: 50px;
+  line-height: 1.5;
+}
+
+/* Carousel */
+.new-arrival-carousel {
+  flex: 1.5;
+  max-width: 600px;
+}
+
+.book-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-carousel-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-carousel-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.carousel-book-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6); /* Add background for better visibility */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-logo,
+  .footer-about,
+  .footer-contact,
+  .footer-address {
+    flex: 1 1 100%;
+    margin-bottom: 15px; /* Reduced spacing between sections */
+  }
+}
+
+.app-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: linear-gradient(145deg, #ffffff, #e0e0e0);
+  z-index: 100;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-bar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Container */
+.logo {
+  margin-left: 20px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+/* Logo Image */
+.logo-image {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+}
+
+/* Logo Text */
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo-text:hover {
+  color: #555;
+  transform: scale(1.1);
+}
+
+/* Card Styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  border-color: #ff7043; /* Highlight the border with a theme color */
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title h5 {
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card-img-top {
+  width: 100%; /* Ensure the image spans the card's width */
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image fills the space while maintaining aspect ratio */
+  border-top-left-radius: 10px; /* Maintain rounded corners */
+  border-top-right-radius: 10px;
+  background-color: #f9f9f9; /* Optional: adds a neutral background */
+}
+
